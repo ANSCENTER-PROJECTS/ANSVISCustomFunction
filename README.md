@@ -56,7 +56,7 @@ User can use this template and re-implement overrided methods to achieve followi
 - AI pipeline inference: User can design any customised AI piple by joining mulitple AI models in customised logic and call the pipeline in RunInference method.
   This RunInference method can combile pre-processing, AI pipeline, customised business rules, and post processing.
 
-The output of RunInference method is the arrray of CustomObject that contains important information for ANSVIS to process.
+The output of RunInference method is the array of the CustomObject that contains important information for ANSVIS to process.
 ![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/cd19ee83-20bc-444f-9c84-4b11bc1853e9)
 
 
