@@ -7,6 +7,8 @@ This template offers a structured framework for designing custom analytic functi
     - Release Version: [Download OpenCV 4.7.0](https://github.com/opencv/opencv/releases/download/4.7.0/opencv-4.7.0-windows.exe)
     - Build from Source: [OpenCV 4.7.0 Source](https://github.com/opencv/opencv/tree/4.7.0)
 - Visual Studio 2022: [Download Visual Studio VS2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false)
+
+  
 **Project settings:**
 To compile and build the project successfully, users must ensure the correct configuration of Include Directories and Library Directories, directing them to the installed OpenCV directories.
 **Steps:**
