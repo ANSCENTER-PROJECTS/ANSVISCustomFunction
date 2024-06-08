@@ -48,7 +48,6 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input)
 {
 	// Run inference
 	std::vector<CustomObject> results;
-
     // Initialize random seed
     std::srand(std::time(0));
 
