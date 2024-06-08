@@ -40,6 +40,25 @@ The ANS customised function structure folder contains 4 important parts as shown
 After adding all required files to the folder as shown above, user has to zip this folder with the defaul zip password: AnsCustomModels20@$
 ![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/a38b6d9a-34fd-479e-a1db-2666cca15cde)
 
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/6c69cd72-4265-42ae-8170-7bd0b84239aa)
+
+This modelzip file can be uploaded in the ANSVIS model page.
+
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/0ae9ab8a-bfcf-43de-a8d1-502d5edb15d7)
+
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/5b9b6636-4f94-41cb-a16f-42a44df66ce4)
+
+**Implementing overrided methods**
+User can use this template and re-implement overrided methods to achieve following tasks:
+- Preprocessing: User can add any pre-processing methods to enhance input image
+- Load and optimise AI models: User can load and optimise AI models (if required) by overriding LoadModel and OptimizedModel methods.
+- Postproceswing: User can add any post-processing method to add more logic to inference result.
+- AI pipeline inference: User can design any customised AI piple by joining mulitple AI models in customised logic and call the pipeline in RunInference method.
+  This RunInference method can combile pre-processing, AI pipeline, customised business rules, and post processing.
+
+The output of RunInference method is the arrray of CustomObject that contains important information for ANSVIS to process.
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/cd19ee83-20bc-444f-9c84-4b11bc1853e9)
+
 
 
 
