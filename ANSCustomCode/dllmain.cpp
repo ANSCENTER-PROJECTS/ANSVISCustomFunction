@@ -49,13 +49,25 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input)
 	// Run inference
 	std::vector<CustomObject> results;
 
+    // Initialize random seed
+    std::srand(std::time(0));
+
+    // Generate random bounding box coordinates
+    int x = std::rand() % input.cols;
+    int y = std::rand() % input.rows;
+    int width = std::rand() % (input.cols - x); // Ensure the box doesn't go outside the image
+    int height = std::rand() % (input.rows - y); // Ensure the box doesn't go outside the image
+
+    // Create the bounding box
+    cv::Rect randomBox(x, y, width, height);
+
     // Dummy customised logic here
     CustomObject obj;
     obj.classId = 1;
     obj.trackId = 1;
-    obj.className = "Custom Name";
+    obj.className = "CName";
     obj.confidence = float(0.95);
-    obj.box = cv::Rect(10, 10, 100, 100);
+    obj.box = randomBox;
     obj.mask = input;
     obj.extraInfo = "Extra Information";
     obj.kps = { 1.0, 2.0, 3.0, 4.0 };
@@ -73,6 +85,7 @@ bool ANSCustomClass::Initialize(const std::string& modelZipFilePath,  std::strin
 {
     //The zip password: AnsCustomModels20@$
 	// Initialize the model
+    labelMap = "CName";
 	return true;
 }
 ANSCustomClass::~ANSCustomClass()
