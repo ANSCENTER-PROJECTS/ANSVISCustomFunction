@@ -36,5 +36,10 @@ The ANS customised function structure folder contains 4 important parts as shown
 - customised models: ANSVIS support onnx, OpenVINO, Pytorch, and Tensorflow.
 - dependency library: Any code/models require dependency libaries, and these libraries have to be in the same folder.
 
+**Prepare Customised Function Zip file**
+After adding all required files to the folder as shown above, user has to zip this folder with the defaul zip password: AnsCustomModels20@$
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/a38b6d9a-34fd-479e-a1db-2666cca15cde)
+
+
 
 
