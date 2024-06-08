@@ -20,11 +20,10 @@ struct CustomObject
 class CUSTOM_API IANSCustomClass
 {
 protected:
-   
+   std::string _modelDirectory; // The directory where the model is located
 public:
-    virtual bool Initialize(const std::string& modelZipFilePath, std::string& labelMap) = 0;
-    virtual bool LoadModel(const std::string& modelZipFilePath) = 0;
-    virtual bool OptimizeModel(bool fp16, std::string& optimizedModelFolder) = 0;
+    virtual bool Initialize(const std::string& modelDirectory, std::string& labelMap) = 0;
+    virtual bool OptimizeModel(bool fp16) = 0;
     virtual std::vector<CustomObject> RunInference(const cv::Mat& input) = 0;
     virtual bool Destroy() = 0;
 };

@@ -1,13 +1,12 @@
-// dllmain.cpp : Defines the entry point for the DLL application.
 #include "pch.h"
 #include "ANSCustomCode.h"
 
+// The zip password to zip the customised model: AnsCustomModels20@$
 class CUSTOM_API ANSCustomClass: public IANSCustomClass
 {
 public:
-    bool Initialize(const std::string& modelZipFilePath, std::string& labelMap)override;
-    bool LoadModel(const std::string& modelZipFilePath)override;
-    bool OptimizeModel(bool fp16, std::string& optimizedModelFolder)override;
+    bool Initialize(const std::string& modelDiretory, std::string& labelMap)override;
+    bool OptimizeModel(bool fp16)override;
     std::vector<CustomObject> RunInference(const cv::Mat& input)override;
     bool Destroy()override;
     ANSCustomClass();
@@ -33,34 +32,33 @@ ANSCustomClass::ANSCustomClass()
 {
 	// Initialize the model
 }
-bool ANSCustomClass::OptimizeModel(bool fp16, std::string& optimizedModelFolder)
+bool ANSCustomClass::OptimizeModel(bool fp16)
 {
 	// Optimize the model
+    // User can access to the _modelDirectory to get the models' path
+    // User can start doing the optimization here for each model
 	return true;
 }
-bool ANSCustomClass::LoadModel(const std::string& modelZipFilePath)
-{
-	// Load the model
-    // The zip password: AnsCustomModels20@$
-    	return true;
-}
+
 std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input)
 {
-	// Run inference
+	// Run inference on the input image
 	std::vector<CustomObject> results;
-    // Initialize random seed
-    std::srand(std::time(0));
 
+    //1. Preprocessing to enhance the image
+    // User can implement the preprocessing logic here
+        
+    //2. Create AI model pipeline by combining the mutiple models in different ways
+    // User can implement the AI model pipeline logic here
+    // In this example, we will generate a random bounding box and return it as a result
+    
+     std::srand(std::time(0));
     // Generate random bounding box coordinates
     int x = std::rand() % input.cols;
     int y = std::rand() % input.rows;
     int width = std::rand() % (input.cols - x); // Ensure the box doesn't go outside the image
     int height = std::rand() % (input.rows - y); // Ensure the box doesn't go outside the image
-
-    // Create the bounding box
     cv::Rect randomBox(x, y, width, height);
-
-    // Dummy customised logic here
     CustomObject obj;
     obj.classId = 1;
     obj.trackId = 1;
@@ -73,23 +71,40 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input)
     obj.polygon = { cv::Point(10, 10), cv::Point(20, 20), cv::Point(30, 30) };
     results.push_back(obj);
 
+    //3. Cusomize business logic
+    // User can implement the business logic here to modify the results
+
+    //4. Postprocessing to enhance the results
+    // User can implement the postprocessing logic here
 	return results;
 }
 bool ANSCustomClass::Destroy()
 {
-	// Destroy the model
+	// Destroy any references
 	return true;
 }
-bool ANSCustomClass::Initialize(const std::string& modelZipFilePath,  std::string& labelMap)
+bool ANSCustomClass::Initialize(const std::string& modelDirectory,  std::string& labelMap)
 {
-    //The zip password: AnsCustomModels20@$
-	// Initialize the model
+    //1. The modelDirectory is supplied by ANSVIS and contains the path to the model files
+    _modelDirectory = modelDirectory;
+
+    //2. User can start impelementing the initialization logic here
+    // Loading the model, initializing the model, etc.
+
+    //3 User also need to return the labelMap which is the name of the class
+    // In this example, we will return "CName" as the class name
     labelMap = "CName";
+
+    //4. Return true if the initialization is successful
 	return true;
 }
 ANSCustomClass::~ANSCustomClass()
 {
     // Release resources
+    // Free memory
+    // Close files
+    // Close connections
+    // etc.
 }
 
 
