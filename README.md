@@ -27,6 +27,14 @@ Use can design any custom analytic functions, models, or pipelines by implementi
 All 5 virtual method needs to be overrided.
 ![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/550c60e9-02d0-4280-985b-39142154f201)
 
+**ANS Customised Function structure**
+The ANS customised function structure folder contains 4 important parts as shown bellow:
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/8117a003-666e-4aff-8140-0a38ce3e2a2c)
+
+- anscustom.txt (Required): This is the text file to inform ANSVIS to know that this is the supported custom model.
+- ANSCustomCode.dll: This is the complied ANSCustomCode project that implement 5 overrided methods of ANSCustomClass.
+- customised models: ANSVIS support onnx, OpenVINO, Pytorch, and Tensorflow.
+- dependency library: Any code/models require dependency libaries, and these libraries have to be in the same folder.
 
 
 
