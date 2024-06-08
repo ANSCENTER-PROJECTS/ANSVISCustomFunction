@@ -31,24 +31,36 @@ All 5 virtual method needs to be overrided.
 
 **ANS Customised Function structure**
 The ANS customised function structure folder contains 4 important parts as shown bellow:
-![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/8117a003-666e-4aff-8140-0a38ce3e2a2c)
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/f2858240-fb6e-4f6e-b60b-c8162eeab6c0)
+
 
 - anscustom.txt (Required): This is the text file to inform ANSVIS to know that this is the supported custom model.
 - ANSCustomCode.dll: This is the complied ANSCustomCode project that implement 5 overrided methods of ANSCustomClass.
+- Categories folder: this folder contain files to that represents label names. For examples, labelmap contains 3 names: "name1,name2,name3".
+  then the Categories will contain 3 files: name1.1, name2.2, name3.3
+- classes.names: is the text file contains labelmap names. 
 - customised models: ANSVIS support onnx, OpenVINO, Pytorch, and Tensorflow.
 - dependency library: Any code/models require dependency libaries, and these libraries have to be in the same folder.
 
+***Categories folder***
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/03ad7ae1-b458-4ed5-9b15-e2e1adeaa07d)
+
+***classes.names file***
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/17687818-e800-4416-b0ca-b5d66fc3a78e)
+
+
+
 **Prepare Customised Function Zip file**
 After adding all required files to the folder as shown above, user has to zip this folder with the defaul zip password: AnsCustomModels20@$
-![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/a38b6d9a-34fd-479e-a1db-2666cca15cde)
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/27d85372-738f-4fe5-b8ac-1d27ba00b7cc)
 
 ![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/6c69cd72-4265-42ae-8170-7bd0b84239aa)
 
 This modelzip file can be uploaded in the ANSVIS model page.
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/8f5c16d7-6da3-4098-8615-81a76f41d204)
 
-![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/0ae9ab8a-bfcf-43de-a8d1-502d5edb15d7)
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/43a4f5b1-7faa-4aec-bc1f-dc86bd5d7728)
 
-![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/5b9b6636-4f94-41cb-a16f-42a44df66ce4)
 
 **Implementing overrided methods**
 User can use this template and re-implement overrided methods to achieve following tasks:
