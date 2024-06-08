@@ -73,6 +73,12 @@ User can use this template and re-implement overrided methods to achieve followi
 The output of RunInference method is the array of the CustomObject that contains important information for ANSVIS to process.
 ![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/cd19ee83-20bc-444f-9c84-4b11bc1853e9)
 
+# Test customised model in ANSVIS
+User can create a deployment group with new model
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/3e5cd33e-9ed8-4ba8-be6e-c3609bbd33ea)
+
+Use existing rules
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/e7467b14-60df-44ee-abfe-afbc368c706e)
 
 
 
