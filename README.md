@@ -22,6 +22,11 @@ Linker needs to include at least the opencv_core470.lib
 
 ![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/8cf779c8-357e-40e3-9324-da027a319c90)
 
+# Design customised class
+Use can design any custom analytic functions, models, or pipelines by implementing ANSCustomClass (inherited from IANSCustomClass).
+All 5 virtual method needs to be overrided.
+![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/550c60e9-02d0-4280-985b-39142154f201)
+
 
 
 
