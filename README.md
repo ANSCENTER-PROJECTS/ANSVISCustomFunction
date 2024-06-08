@@ -34,13 +34,13 @@ The ANS customised function structure folder contains 4 important parts as shown
 ![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/f2858240-fb6e-4f6e-b60b-c8162eeab6c0)
 
 
-- anscustom.txt (Required): This is the text file to inform ANSVIS to know that this is the supported custom model.
-- ANSCustomCode.dll: This is the complied ANSCustomCode project that implement 5 overrided methods of ANSCustomClass.
-- Categories folder: this folder contain files to that represents label names. For examples, labelmap contains 3 names: "name1,name2,name3".
+- anscustom.txt (Required, the name can not be changed): This is the text file to inform ANSVIS to know that this is the supported custom model.
+- ANSCustomCode.dll (Required, the name can not be changed): This is the complied ANSCustomCode project that implement 5 overrided methods of ANSCustomClass.
+- Categories folder (Required, the name can not be changed): this folder contain files to that represents label names. For examples, labelmap contains 3 names: "name1,name2,name3".
   then the Categories will contain 3 files: name1.1, name2.2, name3.3
-- classes.names: is the text file contains labelmap names. 
-- customised models: ANSVIS support onnx, OpenVINO, Pytorch, and Tensorflow.
-- dependency library: Any code/models require dependency libaries, and these libraries have to be in the same folder.
+- classes.names (Required, the name can not be changed): is the text file contains labelmap names. 
+- customised models (Optional, names can be varied): ANSVIS support onnx, OpenVINO, Pytorch, and Tensorflow.
+- dependency library (Optional, names can be varied): Any code/models require dependency libaries, and these libraries have to be in the same folder.
 
 ***Categories folder***
 
@@ -67,7 +67,7 @@ This modelzip file can be uploaded in the ANSVIS model page.
 **Implementing overrided methods**
 User can use this template and re-implement overrided methods to achieve following tasks:
 - Preprocessing: User can add any pre-processing methods to enhance input image
-- Load and optimise AI models: User can load and optimise AI models (if required) by overriding LoadModel and OptimizedModel methods.
+- Load and optimise AI models: User can load and optimise AI models (if required) by overriding Initialize and OptimizedModel methods.
 - Postproceswing: User can add any post-processing method to add more logic to inference result.
 - AI pipeline inference: User can design any customised AI piple by joining mulitple AI models in customised logic and call the pipeline in RunInference method.
   This RunInference method can combile pre-processing, AI pipeline, customised business rules, and post processing.
