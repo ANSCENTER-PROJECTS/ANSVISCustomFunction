@@ -124,7 +124,7 @@
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <AdditionalLibraryDirectories>C:\Dependencies\tensorrt\build\Debug;C:\Dependencies\tensorrt\build\trtcore\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>

@@ -88,4 +88,4 @@ Running and monitoring
 
 # YoloV8Engine Optimize with TensorRT
 
-Please download [Dependencies](https://anscentervn-my.sharepoint.com/:u:/g/personal/phong_pham_anscenter_com/EfdC3u3LvGNGrJIwad2J1JIBS_IdIGDfFxEemIuzlF9thg?e=qAy2u6) & model `yolov8s.onnx`. After download extra file to `Local (C)` .
+Please download [Dependencies](https://anscentervn-my.sharepoint.com/:u:/g/personal/phong_pham_anscenter_com/EfdC3u3LvGNGrJIwad2J1JIBS_IdIGDfFxEemIuzlF9thg?e=qAy2u6) & model `yolov8s.onnx`. After download extra file to `Local (C)`.

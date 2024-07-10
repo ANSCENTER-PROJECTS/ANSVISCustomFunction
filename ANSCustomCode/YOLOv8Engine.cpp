@@ -1,10 +1,9 @@
-﻿#include "pch.h"  // Bao gồm tiêu đề biên dịch trước
+﻿#include "pch.h"
 #include "YOLOv8Engine.h"
 #include "trtinferencehandler.h"
 
 bool YOLOv8Engine::Initialize(const std::string& modelDirectory, std::string& labelMap)
 {
-    // Khởi tạo mô hình
     try
     {
         m_inference = std::make_unique<InferenceTRT>(
@@ -16,7 +15,7 @@ bool YOLOv8Engine::Initialize(const std::string& modelDirectory, std::string& la
         std::cerr << "Error initialize YOLOv8Engine: " << ex.what() << std::endl;
         return false;
     }
-    labelMap = "CName"; // Tên lớp ví dụ
+    labelMap = "CName"; // Class modify example
     return true;
 }
 
