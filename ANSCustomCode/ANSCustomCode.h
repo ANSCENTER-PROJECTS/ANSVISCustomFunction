@@ -5,6 +5,7 @@
 #include <vector>
 #include <opencv2/opencv.hpp>
 #define CUSTOM_API __declspec(dllexport)
+
 struct CustomObject
 {
     int classId{ 0 };
@@ -28,4 +29,5 @@ public:
     virtual bool Destroy() = 0;
 };
 
+extern "C" CUSTOM_API IANSCustomClass* Create();
 #endif
