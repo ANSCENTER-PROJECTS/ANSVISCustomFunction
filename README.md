@@ -2,13 +2,19 @@
 This template offers a structured framework for designing custom analytic functions, models, or pipelines to seamlessly integrate and execute within the ANSVIS Server environment, utilizing OpenCV 4.7.
 
 **Dependencies:**
-- OpenCV 4.7: 
+- OpenCV 4.: 
   - Installation: 
-    - Release Version: [Download OpenCV 4.7.0](https://github.com/opencv/opencv/releases/download/4.7.0/opencv-4.7.0-windows.exe)
-    - Build from Source: [OpenCV 4.7.0 Source](https://github.com/opencv/opencv/tree/4.7.0)
-- Visual Studio 2022: [Download Visual Studio VS2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false)
-
+    - Release Version: [Download OpenCV 4.10.0](https://storage.googleapis.com/anscenter-public-resources/runtime-engine/opencv.zip)
+    - Build from Source: [OpenCV 4.10.0 Source](https://github.com/opencv/opencv)
   
+  Download and place opencv in C:\opencv directory 
+  ![image](https://github.com/user-attachments/assets/41e4e748-9185-4597-8955-de03d7795772)
+
+- Visual Studio 2022: [Download Visual Studio VS2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false)
+- Microsoft Visual C++ Redistributable
+    - [VC++ x86](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+    - [VC++ x64](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
 **Project settings:**
 To compile and build the project successfully, users must ensure the correct configuration of Include Directories and Library Directories, directing them to the installed OpenCV directories.
 **Steps:**
