@@ -79,6 +79,35 @@ User can use this template and re-implement overrided methods to achieve followi
 - AI pipeline inference: User can design any customised AI piple by joining mulitple AI models in customised logic and call the pipeline in RunInference method.
   This RunInference method can combile pre-processing, AI pipeline, customised business rules, and post processing.
 
-The output of RunInference method is the array of the CustomObject that contains important information for ANSVIS to process.
-![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/cd19ee83-20bc-444f-9c84-4b11bc1853e9)
+**Use Customised Model in ANSVIS**
+In this repo, we have prepared a simple customised model to be used in ANSVIS. This model (ANSCustomModel_v4.zip), is located in Examples folder.
 
+![image](https://github.com/user-attachments/assets/0c2d3f58-2b46-489b-817e-7211496526b9)
+
+1. Launch ANSVIS
+   ![image](https://github.com/user-attachments/assets/b1406a25-1599-497b-b796-1641a993b664)
+
+2. Upload ANSCustomModel_v4.zip to ANSVIS
+   In the model page, upload model to ANSVIS in 3 steps:
+   
+![image](https://github.com/user-attachments/assets/b0b17810-7e46-4b93-a592-e411d3d4759d)
+
+![image](https://github.com/user-attachments/assets/fb4f781b-0207-4bae-a75d-cc12eee34b12)
+
+3. Create AI Task using ANSCustomModel_v4 model
+   + Create the AI Task by navigating to Task Group page, and add Server AI Task Group
+     ![image](https://github.com/user-attachments/assets/ee0b8680-68a5-4e21-9c3c-7f69d1204c12)
+  
+  + Create AI Task Group: Select a camera
+    ![image](https://github.com/user-attachments/assets/9b3ff339-287b-4c92-8601-507a40d53e40)
+
+  + Create AI Task Group: Select customised model
+    ![image](https://github.com/user-attachments/assets/c708245d-89bc-494b-af16-78b4a31d9bba)
+
+  + Create AI Task Group: Create Rule
+    ![image](https://github.com/user-attachments/assets/9275b1c8-e528-452a-a11d-69c8ac48567d)
+
+    ![image](https://github.com/user-attachments/assets/cda23e3b-9af5-400d-9ff6-9e3f2d702ca2)
+
+  + Create AI Task Group: Save Task
+    ![image](https://github.com/user-attachments/assets/afa6ed0b-bcdd-48e2-846f-2db9ec687e36)
