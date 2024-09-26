@@ -111,3 +111,12 @@ In this repo, we have prepared a simple customised model to be used in ANSVIS. T
 
   + Create AI Task Group: Save Task
     ![image](https://github.com/user-attachments/assets/afa6ed0b-bcdd-48e2-846f-2db9ec687e36)
+
+4. Run customised model and get the events
+
+   ![image](https://github.com/user-attachments/assets/041e7347-e97b-4ddf-819d-c23f9bd45073)
+   ![image](https://github.com/user-attachments/assets/ef64fa06-9308-4de9-b36d-2c44b8bd21fa)
+   ![image](https://github.com/user-attachments/assets/880ff32a-9a0f-49e1-80bf-77693631b4c0)
+
+   
+ 
