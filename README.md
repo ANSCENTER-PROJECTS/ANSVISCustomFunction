@@ -26,9 +26,10 @@ To compile and build the project successfully, users must ensure the correct con
 ![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/c8e59aca-6f52-4ac3-8685-0ff6711a9254)
 
 3. **Add libraries to linker:**
-Linker needs to include at least the opencv_core470.lib
+Linker needs to include at least the opencv_world4100.lib
 
-![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/8cf779c8-357e-40e3-9324-da027a319c90)
+![image](https://github.com/user-attachments/assets/6307a523-1e89-488a-8328-311e7f8cb53b)
+
 
 # Design customised class
 Use can design any custom analytic functions, models, or pipelines by implementing ANSCustomClass (inherited from IANSCustomClass).
