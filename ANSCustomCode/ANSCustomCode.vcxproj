@@ -141,7 +141,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>opencv_highgui470.lib;opencv_videoio470.lib;opencv_imgcodecs470.lib;opencv_text470.lib;opencv_video470.lib;opencv_dnn470.lib;opencv_imgproc470.lib;opencv_core470.lib;opencv_cudawarping470.lib;opencv_cudaarithm470.lib;opencv_cudaimgproc470.lib;opencv_objdetect470.lib;opencv_photo470.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_img_hash4100.lib;opencv_world4100.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
