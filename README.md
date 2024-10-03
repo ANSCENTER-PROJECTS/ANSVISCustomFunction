@@ -1,5 +1,5 @@
 # Custom Function Design Template for ANSVIS Server
-This template offers a structured framework for designing custom analytic functions, models, or pipelines to seamlessly integrate and execute within the ANSVIS Server environment, utilizing OpenCV 4.7.
+This template offers a structured framework for designing custom analytic functions, models, or pipelines to seamlessly integrate and execute within the ANSVIS Server environment, utilizing OpenCV 4.10.
 
 **Dependencies:**
 - OpenCV 4.: 
