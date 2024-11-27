@@ -45,8 +45,8 @@ Linker needs to include at least the opencv_world4100.lib
 
 # Design customised class
 Use can design any custom analytic functions, models, or pipelines by implementing ANSCustomClass (inherited from IANSCustomClass).
-All 4 virtual method needs to be overrided.
-![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/fd2b07be-be04-406c-8bb8-e1b1d1aa7400)
+All 5 virtual method needs to be overrided.
+![image](https://github.com/user-attachments/assets/2dadd524-287e-4b34-8c99-15e883dd85f9)
 
 **ANS Customised Function structure**
 The ANS customised function structure folder contains 4 important parts as shown bellow:
