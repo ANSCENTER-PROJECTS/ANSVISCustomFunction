@@ -16,6 +16,7 @@ struct CustomObject
     cv::Mat mask;             //Json string mask ="point1.x,point1.y,...."
     std::vector<float> kps{};   // Pose exsimate keypoint
     std::string extraInfo;      // More information such as facial recognition
+    std::string cameraId;
 };
 class CUSTOM_API IANSCustomClass
 {
@@ -25,6 +26,7 @@ public:
     virtual bool Initialize(const std::string& modelDirectory, std::string& labelMap) = 0;
     virtual bool OptimizeModel(bool fp16) = 0;
     virtual std::vector<CustomObject> RunInference(const cv::Mat& input) = 0;
+    virtual std::vector<CustomObject> RunInference(const cv::Mat& input, const std::string& camera_id) = 0;
     virtual bool Destroy() = 0;
 };
 

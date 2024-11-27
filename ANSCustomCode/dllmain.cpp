@@ -8,6 +8,7 @@ public:
     bool Initialize(const std::string& modelDiretory, std::string& labelMap)override;
     bool OptimizeModel(bool fp16)override;
     std::vector<CustomObject> RunInference(const cv::Mat& input)override;
+    std::vector<CustomObject> RunInference(const cv::Mat& input, const std::string& camera_id)override;
     bool Destroy()override;
     ANSCustomClass();
     ~ANSCustomClass();
@@ -69,6 +70,7 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input)
     obj.extraInfo = "Extra Information";
     obj.kps = { 1.0, 2.0, 3.0, 4.0 };
     obj.polygon = { cv::Point(10, 10), cv::Point(20, 20), cv::Point(30, 30) };
+	obj.cameraId = "Camera1";
     results.push_back(obj);
 
     //3. Cusomize business logic
@@ -77,6 +79,45 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input)
     //4. Postprocessing to enhance the results
     // User can implement the postprocessing logic here
 	return results;
+}
+std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input, const std::string& camera_id)
+{
+    // Run inference on the input image
+    std::vector<CustomObject> results;
+
+    //1. Preprocessing to enhance the image
+    // User can implement the preprocessing logic here
+
+    //2. Create AI model pipeline by combining the mutiple models in different ways
+    // User can implement the AI model pipeline logic here
+    // In this example, we will generate a random bounding box and return it as a result
+
+    std::srand(std::time(0));
+    // Generate random bounding box coordinates
+    int x = std::rand() % input.cols;
+    int y = std::rand() % input.rows;
+    int width = std::rand() % (input.cols - x); // Ensure the box doesn't go outside the image
+    int height = std::rand() % (input.rows - y); // Ensure the box doesn't go outside the image
+    cv::Rect randomBox(x, y, width, height);
+    CustomObject obj;
+    obj.classId = 1;
+    obj.trackId = 1;
+    obj.className = "CName";
+    obj.confidence = float(0.95);
+    obj.box = randomBox;
+    obj.mask = input;
+    obj.extraInfo = "Extra Information";
+    obj.kps = { 1.0, 2.0, 3.0, 4.0 };
+    obj.polygon = { cv::Point(10, 10), cv::Point(20, 20), cv::Point(30, 30) };
+	obj.cameraId = camera_id;
+    results.push_back(obj);
+
+    //3. Cusomize business logic
+    // User can implement the business logic here to modify the results
+
+    //4. Postprocessing to enhance the results
+    // User can implement the postprocessing logic here
+    return results;
 }
 bool ANSCustomClass::Destroy()
 {
