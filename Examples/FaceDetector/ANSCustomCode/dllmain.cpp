@@ -1,21 +1,8 @@
 #include "pch.h"
 #include "ANSCustomCode.h"
-#include "lite.h"
 
-// The zip password to zip the customised model: AnsCustomModels20@$
-class CUSTOM_API ANSCustomClass : public IANSCustomClass
-{
-public:
 
-    std::unique_ptr<ortcv::SCRFD>face_detector = nullptr;
-    bool Initialize(const std::string& modelDiretory, std::string& labelMap)override;
-    bool OptimizeModel(bool fp16)override;
-    std::vector<CustomObject> RunInference(const cv::Mat& input)override;
-    std::vector<CustomObject> RunInference(const cv::Mat& input, const std::string& camera_id)override;
-    bool Destroy()override;
-    ANSCustomClass();
-    ~ANSCustomClass();
-};
+
 BOOL APIENTRY DllMain(HMODULE hModule,
     DWORD  ul_reason_for_call,
     LPVOID lpReserved
@@ -51,18 +38,22 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input)
 
     std::vector<lite::types::BoxfWithLandmarks> detected_boxes;
     this->face_detector->detect(input, detected_boxes);
-
     for (const auto& box : detected_boxes)
     {
         CustomObject obj;
-        obj.classId = 1;
-        obj.trackId = 1;
+        obj.classId = 0;
+        obj.trackId = 0;
         obj.className = "Face";
         obj.confidence = float(box.box.score);
         obj.box = box.box.rect();
         obj.mask = input;
         obj.extraInfo = "Custom";
-        obj.kps = {};
+		for (cv::Point2f point : box.landmarks.points)
+		{
+			obj.kps.push_back(point.x);
+			obj.kps.push_back(point.y);
+		}
+		// kps will include x1, y1, x2, y2, x3, y3, x4, y4, x5, y5
         obj.polygon = { cv::Point(10, 10), cv::Point(20, 20), cv::Point(30, 30) };
 		obj.cameraId = "FaceOrtCam";
         results.push_back(obj);
@@ -79,14 +70,19 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input, con
     for (const auto& box : detected_boxes)
     {
         CustomObject obj;
-        obj.classId = 1;
-        obj.trackId = 1;
+        obj.classId = 0;
+        obj.trackId = 0;
         obj.className = "Face";
         obj.confidence = float(box.box.score);
         obj.box = box.box.rect();
         obj.mask = input;
         obj.extraInfo = "Custom";
-        obj.kps = {};
+        for (cv::Point2f point : box.landmarks.points)
+        {
+            obj.kps.push_back(point.x);
+            obj.kps.push_back(point.y);
+        }
+        // kps will include x1, y1, x2, y2, x3, y3, x4, y4, x5, y5
         obj.polygon = { cv::Point(10, 10), cv::Point(20, 20), cv::Point(30, 30) };
         obj.cameraId = camera_id;
         results.push_back(obj);

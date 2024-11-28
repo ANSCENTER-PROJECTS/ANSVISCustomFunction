@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <opencv2/opencv.hpp>
+#include "lite.h"
 #define CUSTOM_API __declspec(dllexport)
 struct CustomObject
 {
@@ -28,6 +29,21 @@ public:
     virtual std::vector<CustomObject> RunInference(const cv::Mat& input) = 0;
     virtual std::vector<CustomObject> RunInference(const cv::Mat& input, const std::string& camera_id) = 0;
     virtual bool Destroy() = 0;
+};
+
+// The zip password to zip the customised model: AnsCustomModels20@$
+class CUSTOM_API ANSCustomClass : public IANSCustomClass
+{
+public:
+
+    std::unique_ptr<ortcv::SCRFD>face_detector = nullptr;
+    bool Initialize(const std::string& modelDiretory, std::string& labelMap)override;
+    bool OptimizeModel(bool fp16)override;
+    std::vector<CustomObject> RunInference(const cv::Mat& input)override;
+    std::vector<CustomObject> RunInference(const cv::Mat& input, const std::string& camera_id)override;
+    bool Destroy()override;
+    ANSCustomClass();
+    ~ANSCustomClass();
 };
 
 #endif
