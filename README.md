@@ -132,14 +132,17 @@ In this repo, we have prepared a simple customised model to be used in ANSVIS. T
 
    
  5. Add Face Detection example
+  
   Please explore FaceDetector example that uses onnxruntime engine to for face detection task
     ![image](https://github.com/user-attachments/assets/8bdf144b-4d6e-402d-96e6-91ee4e8f52f4)
 
+  
   Run FaceDetector-Unit test
     ![image](https://github.com/user-attachments/assets/624529db-7974-4eb8-9c7b-b1f3636b933d)
 
     ![image](https://github.com/user-attachments/assets/dad427c9-b1e8-493d-993b-442b42c3ae28)
 
+  
   Run face detection model on ANSVIS
   ![image](https://github.com/user-attachments/assets/fce47d55-fa96-4e60-b7f6-f63d40826138)
 
