@@ -2,7 +2,7 @@
 This template offers a structured framework for designing custom analytic functions, models, or pipelines to seamlessly integrate and execute within the ANSVIS Server environment, utilizing OpenCV 4.10.
 
 **Dependencies:**
-- OpenCV 4.: 
+- OpenCV 4.10: 
   - Installation: 
     - Release Version: [Download OpenCV 4.10.0](https://storage.googleapis.com/anscenter-public-resources/runtime-engine/opencv.zip)
     - Build from Source: [OpenCV 4.10.0 Source](https://github.com/opencv/opencv)
@@ -14,6 +14,18 @@ This template offers a structured framework for designing custom analytic functi
 - Microsoft Visual C++ Redistributable
     - [VC++ x86](https://aka.ms/vs/17/release/vc_redist.x86.exe)
     - [VC++ x64](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+- Other Inference engines (optional)
+    - Onnxruntime (1.20.1):
+        - GPU version: https://github.com/microsoft/onnxruntime/releases/download/v1.20.1/onnxruntime-win-x64-gpu-1.20.1.zip
+        - CPU version: https://github.com/microsoft/onnxruntime/releases/download/v1.20.1/onnxruntime-win-x86-1.20.1.zip
+     Please download onnxruntime engine and place it in: C:\ directory (C:\onnxruntime-win-x64-gpu-1.20.1)
+    
+    - OpenVINO (2004.5.0):
+      Download link: https://storage.openvinotoolkit.org/repositories/openvino/packages/2024.5/windows/w_openvino_toolkit_windows_2024.5.0.17288.7975fa5da0c_x86_64.zip
+       Please download openvino engine and place it in: C:\ directory (C:\OpenVINO-2024.5.0)
+    - TensorTR (10.6.0.26)
+       Please download TensorRT engine and place it in: C:\ directory (C:\TensorRT-10.6.0.26)
 
 **Project settings:**
 To compile and build the project successfully, users must ensure the correct configuration of Include Directories and Library Directories, directing them to the installed OpenCV directories.
@@ -33,8 +45,8 @@ Linker needs to include at least the opencv_world4100.lib
 
 # Design customised class
 Use can design any custom analytic functions, models, or pipelines by implementing ANSCustomClass (inherited from IANSCustomClass).
-All 4 virtual method needs to be overrided.
-![image](https://github.com/ANSCENTER-PROJECTS/ANSVISCustomFunction/assets/7893168/fd2b07be-be04-406c-8bb8-e1b1d1aa7400)
+All 5 virtual method needs to be overrided.
+![image](https://github.com/user-attachments/assets/2dadd524-287e-4b34-8c99-15e883dd85f9)
 
 **ANS Customised Function structure**
 The ANS customised function structure folder contains 4 important parts as shown bellow:
