@@ -38,7 +38,7 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input)
     for (const auto& box : detected_boxes)
     {
         CustomObject obj;
-        obj.classId = 1;
+        obj.classId = 0; // Class Id now start from 0
         obj.trackId = 0;
         obj.className = "Face";
         obj.confidence = float(box.box.score);
@@ -67,7 +67,7 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input, con
     for (const auto& box : detected_boxes)
     {
         CustomObject obj;
-        obj.classId = 1;
+		obj.classId = 0; // Class ID now starts from 0
         obj.trackId = 0;
         obj.className = "Face";
         obj.confidence = float(box.box.score);
