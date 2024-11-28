@@ -140,7 +140,10 @@ In this repo, we have prepared a simple customised model to be used in ANSVIS. T
   Run FaceDetector-Unit test
     ![image](https://github.com/user-attachments/assets/624529db-7974-4eb8-9c7b-b1f3636b933d)
 
-    ![image](https://github.com/user-attachments/assets/dad427c9-b1e8-493d-993b-442b42c3ae28)
+
+
+   ![image](https://github.com/user-attachments/assets/ca71ee73-f34d-44e4-9b49-79ccbb7ab263)
+ 
 
   
   Run face detection model on ANSVIS
