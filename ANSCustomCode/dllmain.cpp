@@ -61,7 +61,7 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input)
     int height = std::rand() % (input.rows - y); // Ensure the box doesn't go outside the image
     cv::Rect randomBox(x, y, width, height);
     CustomObject obj;
-    obj.classId = 0;
+    obj.classId = 1;
     obj.trackId = 0;
     obj.className = "CName";
     obj.confidence = float(0.95);
@@ -100,7 +100,7 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input, con
     int height = std::rand() % (input.rows - y); // Ensure the box doesn't go outside the image
     cv::Rect randomBox(x, y, width, height);
     CustomObject obj;
-    obj.classId = 0;
+    obj.classId = 1;
     obj.trackId = 0;
     obj.className = "CName";
     obj.confidence = float(0.95);

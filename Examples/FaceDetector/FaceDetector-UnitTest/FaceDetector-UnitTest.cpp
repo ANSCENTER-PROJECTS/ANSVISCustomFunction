@@ -11,7 +11,6 @@ int GPU11EngineImageTest(std::string modelFilePath, std::string imageFilePath) {
     std::string optmizedModelFolder;
     std::vector<std::string> classes;
     // Optimise model
-
     bool initialised = faceDetector.Initialize( modelFilePath.c_str(), labelMap);
 	if (!initialised) {
 		std::cout << "Failed to initialize model.\n";
@@ -41,7 +40,7 @@ int GPU11EngineImageTest(std::string modelFilePath, std::string imageFilePath) {
 
     for (auto result : results) {
 		cv::rectangle(frame, result.box, 123, 2);
-		cv::putText(frame, cv::format("%s:%d", classes[result.classId], result.classId), cv::Point(result.box.x, result.box.y - 5),
+		cv::putText(frame, cv::format("%s:%d", classes[0], 0), cv::Point(result.box.x, result.box.y - 5),
 			0, 0.6, cv::Scalar(0, 0, 255), 1, cv::LINE_AA);
 
 		// Draw landmarks

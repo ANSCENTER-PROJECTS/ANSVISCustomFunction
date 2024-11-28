@@ -30,13 +30,12 @@ public:
     virtual std::vector<CustomObject> RunInference(const cv::Mat& input, const std::string& camera_id) = 0;
     virtual bool Destroy() = 0;
 };
-
 // The zip password to zip the customised model: AnsCustomModels20@$
 class CUSTOM_API ANSCustomClass : public IANSCustomClass
 {
+private:
+    ortcv::SCRFD* face_detector;
 public:
-
-    std::unique_ptr<ortcv::SCRFD>face_detector = nullptr;
     bool Initialize(const std::string& modelDiretory, std::string& labelMap)override;
     bool OptimizeModel(bool fp16)override;
     std::vector<CustomObject> RunInference(const cv::Mat& input)override;
@@ -45,5 +44,4 @@ public:
     ANSCustomClass();
     ~ANSCustomClass();
 };
-
 #endif

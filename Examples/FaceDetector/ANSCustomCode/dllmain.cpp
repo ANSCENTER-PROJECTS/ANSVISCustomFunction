@@ -1,8 +1,5 @@
 #include "pch.h"
 #include "ANSCustomCode.h"
-
-
-
 BOOL APIENTRY DllMain(HMODULE hModule,
     DWORD  ul_reason_for_call,
     LPVOID lpReserved
@@ -41,7 +38,7 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input)
     for (const auto& box : detected_boxes)
     {
         CustomObject obj;
-        obj.classId = 0;
+        obj.classId = 1;
         obj.trackId = 0;
         obj.className = "Face";
         obj.confidence = float(box.box.score);
@@ -70,7 +67,7 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input, con
     for (const auto& box : detected_boxes)
     {
         CustomObject obj;
-        obj.classId = 0;
+        obj.classId = 1;
         obj.trackId = 0;
         obj.className = "Face";
         obj.confidence = float(box.box.score);
@@ -102,7 +99,7 @@ bool ANSCustomClass::Initialize(const std::string& modelDirectory, std::string& 
 
     //2. User can start impelementing the initialization logic here
     std::string model_path = modelDirectory + "/scrfd.onnx";
-    this->face_detector = std::make_unique<ortcv::SCRFD>(model_path);
+    this->face_detector = new ortcv::SCRFD(model_path);
 
     //3 User also need to return the labelMap which is the name of the class
     labelMap = "Face";
@@ -119,7 +116,7 @@ ANSCustomClass::~ANSCustomClass()
     // etc.
 	if (this->face_detector)
 	{
-		this->face_detector.reset();
+		delete this->face_detector;
 	}
 }
 
