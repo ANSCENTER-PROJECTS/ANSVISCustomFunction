@@ -6,7 +6,7 @@ This template offers a structured framework for designing custom analytic functi
   - Installation: 
     - Release Version: [Download OpenCV 4.10.0](https://storage.googleapis.com/anscenter-public-resources/runtime-engine/opencv.zip)
     - Build from Source: [OpenCV 4.10.0 Source](https://github.com/opencv/opencv)
-  
+  - Please place it in C:\ directory (C:\opencv)
   Download and place opencv in C:\opencv directory 
   ![image](https://github.com/user-attachments/assets/41e4e748-9185-4597-8955-de03d7795772)
 
@@ -26,6 +26,8 @@ This template offers a structured framework for designing custom analytic functi
        Please download openvino engine and place it in: C:\ directory (C:\OpenVINO-2024.5.0)
     - TensorTR (10.6.0.26)
        Please download TensorRT engine and place it in: C:\ directory (C:\TensorRT-10.6.0.26)
+    - NVIDIA CUDA 11.8 (https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Windows&target_arch=x86_64&target_version=11)
+    - NVIDIA CUDNN (8.9.7) for NVIDIA CUDA 11.8: please lace it in C:\ directory (C:\cudnn)
 
 **Project settings:**
 To compile and build the project successfully, users must ensure the correct configuration of Include Directories and Library Directories, directing them to the installed OpenCV directories.
