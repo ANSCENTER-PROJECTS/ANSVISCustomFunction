@@ -6,8 +6,8 @@ This template offers a structured framework for designing custom analytic functi
   - Installation: 
     - Release Version: [Download OpenCV 4.10.0](https://storage.googleapis.com/anscenter-public-resources/runtime-engine/opencv.zip)
     - Build from Source: [OpenCV 4.10.0 Source](https://github.com/opencv/opencv)
+
   - Please place it in C:\ directory (C:\opencv)
-  Download and place opencv in C:\opencv directory 
   ![image](https://github.com/user-attachments/assets/41e4e748-9185-4597-8955-de03d7795772)
 
 - Visual Studio 2022: [Download Visual Studio VS2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false)
