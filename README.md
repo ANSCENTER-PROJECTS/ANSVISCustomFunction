@@ -31,6 +31,7 @@ This template offers a structured framework for designing custom analytic functi
 
 **Project settings:**
 To compile and build the project successfully, users must ensure the correct configuration of Include Directories and Library Directories, directing them to the installed OpenCV directories.
+
 **Steps:**
 1. **Include Directories Configuration:**
    - Add the path to the OpenCV header files in your project's Include Directories settings. This enables the compiler to locate and include necessary header files during the build process.
