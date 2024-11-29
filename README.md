@@ -16,17 +16,25 @@ This template offers a structured framework for designing custom analytic functi
     - [VC++ x64](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 - Other Inference engines (optional)
+  
     - Onnxruntime (1.20.1):
         - GPU version: https://github.com/microsoft/onnxruntime/releases/download/v1.20.1/onnxruntime-win-x64-gpu-1.20.1.zip
         - CPU version: https://github.com/microsoft/onnxruntime/releases/download/v1.20.1/onnxruntime-win-x86-1.20.1.zip
-     Please download onnxruntime engine and place it in: C:\ directory (C:\onnxruntime-win-x64-gpu-1.20.1)
+
+      Please download onnxruntime engine and place it in: C:\ directory (C:\onnxruntime-win-x64-gpu-1.20.1)
     
     - OpenVINO (2004.5.0):
+
       Download link: https://storage.openvinotoolkit.org/repositories/openvino/packages/2024.5/windows/w_openvino_toolkit_windows_2024.5.0.17288.7975fa5da0c_x86_64.zip
+
       Please download openvino engine and place it in: C:\ directory (C:\OpenVINO-2024.5.0)
+      
     - TensorTR (10.6.0.26)
+
       Please download TensorRT engine and place it in: C:\ directory (C:\TensorRT-10.6.0.26)
+      
     - NVIDIA CUDA 11.8 (https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Windows&target_arch=x86_64&target_version=11).
+
       Please install in C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8
     - NVIDIA CUDNN (8.9.7) for NVIDIA CUDA 11.8: please place it in C:\ directory (C:\cudnn)
 
