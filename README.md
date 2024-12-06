@@ -6,8 +6,8 @@ This template offers a structured framework for designing custom analytic functi
   - Installation: 
     - Release Version: [Download OpenCV 4.10.0](https://storage.googleapis.com/anscenter-public-resources/runtime-engine/opencv.zip)
     - Build from Source: [OpenCV 4.10.0 Source](https://github.com/opencv/opencv)
-  
-  Download and place opencv in C:\opencv directory 
+
+  - Please place it in C:\ directory (C:\opencv)
   ![image](https://github.com/user-attachments/assets/41e4e748-9185-4597-8955-de03d7795772)
 
 - Visual Studio 2022: [Download Visual Studio VS2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false)
@@ -16,19 +16,31 @@ This template offers a structured framework for designing custom analytic functi
     - [VC++ x64](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 - Other Inference engines (optional)
+  
     - Onnxruntime (1.20.1):
         - GPU version: https://github.com/microsoft/onnxruntime/releases/download/v1.20.1/onnxruntime-win-x64-gpu-1.20.1.zip
         - CPU version: https://github.com/microsoft/onnxruntime/releases/download/v1.20.1/onnxruntime-win-x86-1.20.1.zip
-     Please download onnxruntime engine and place it in: C:\ directory (C:\onnxruntime-win-x64-gpu-1.20.1)
+
+      Please download onnxruntime engine and place it in: C:\ directory (C:\onnxruntime-win-x64-gpu-1.20.1)
     
     - OpenVINO (2004.5.0):
+
       Download link: https://storage.openvinotoolkit.org/repositories/openvino/packages/2024.5/windows/w_openvino_toolkit_windows_2024.5.0.17288.7975fa5da0c_x86_64.zip
-       Please download openvino engine and place it in: C:\ directory (C:\OpenVINO-2024.5.0)
+
+      Please download openvino engine and place it in: C:\ directory (C:\OpenVINO-2024.5.0)
+      
     - TensorTR (10.6.0.26)
-       Please download TensorRT engine and place it in: C:\ directory (C:\TensorRT-10.6.0.26)
+
+      Please download TensorRT engine and place it in: C:\ directory (C:\TensorRT-10.6.0.26)
+      
+    - NVIDIA CUDA 11.8 (https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Windows&target_arch=x86_64&target_version=11).
+
+      Please install in C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8
+    - NVIDIA CUDNN (8.9.7) for NVIDIA CUDA 11.8: please place it in C:\ directory (C:\cudnn)
 
 **Project settings:**
 To compile and build the project successfully, users must ensure the correct configuration of Include Directories and Library Directories, directing them to the installed OpenCV directories.
+
 **Steps:**
 1. **Include Directories Configuration:**
    - Add the path to the OpenCV header files in your project's Include Directories settings. This enables the compiler to locate and include necessary header files during the build process.
@@ -140,7 +152,10 @@ In this repo, we have prepared a simple customised model to be used in ANSVIS. T
   Run FaceDetector-Unit test
     ![image](https://github.com/user-attachments/assets/624529db-7974-4eb8-9c7b-b1f3636b933d)
 
-    ![image](https://github.com/user-attachments/assets/dad427c9-b1e8-493d-993b-442b42c3ae28)
+
+
+   ![image](https://github.com/user-attachments/assets/ca71ee73-f34d-44e4-9b49-79ccbb7ab263)
+ 
 
   
   Run face detection model on ANSVIS
