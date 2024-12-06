@@ -32,8 +32,8 @@ std::vector<CustomObject> ANSCustomClass::RunInference(const cv::Mat& input)
 {
     // Run inference on the input image
     std::vector<CustomObject> results;
-
     std::vector<lite::types::BoxfWithLandmarks> detected_boxes;
+    
     this->face_detector->detect(input, detected_boxes);
     for (const auto& box : detected_boxes)
     {
