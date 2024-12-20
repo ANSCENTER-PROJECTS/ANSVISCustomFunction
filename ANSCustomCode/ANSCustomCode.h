@@ -21,13 +21,14 @@ struct CustomObject
 class CUSTOM_API IANSCustomClass
 {
 protected:
-   std::string _modelDirectory; // The directory where the model is located
+    std::string _modelDirectory; // The directory where the model is located
+    float _detectionScoreThreshold{ 0.5 };
 public:
-    virtual bool Initialize(const std::string& modelDirectory, std::string& labelMap) = 0;
+    virtual bool Initialize(const std::string& modelDirectory, float detectionScoreThreshold, std::string& labelMap) = 0;
     virtual bool OptimizeModel(bool fp16) = 0;
     virtual std::vector<CustomObject> RunInference(const cv::Mat& input) = 0;
     virtual std::vector<CustomObject> RunInference(const cv::Mat& input, const std::string& camera_id) = 0;
     virtual bool Destroy() = 0;
-};
 
+};
 #endif

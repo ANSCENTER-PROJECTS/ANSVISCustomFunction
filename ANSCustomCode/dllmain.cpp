@@ -5,7 +5,7 @@
 class CUSTOM_API ANSCustomClass: public IANSCustomClass
 {
 public:
-    bool Initialize(const std::string& modelDiretory, std::string& labelMap)override;
+    bool Initialize(const std::string& modelDiretory, float detectionScoreThreshold, std::string& labelMap)override;
     bool OptimizeModel(bool fp16)override;
     std::vector<CustomObject> RunInference(const cv::Mat& input)override;
     std::vector<CustomObject> RunInference(const cv::Mat& input, const std::string& camera_id)override;
@@ -124,10 +124,11 @@ bool ANSCustomClass::Destroy()
 	// Destroy any references
 	return true;
 }
-bool ANSCustomClass::Initialize(const std::string& modelDirectory,  std::string& labelMap)
+bool ANSCustomClass::Initialize(const std::string& modelDirectory, float detectionScoreThreshold, std::string& labelMap)
 {
     //1. The modelDirectory is supplied by ANSVIS and contains the path to the model files
     _modelDirectory = modelDirectory;
+	_detectionScoreThreshold = detectionScoreThreshold;
 
     //2. User can start impelementing the initialization logic here
     // Loading the model, initializing the model, etc.

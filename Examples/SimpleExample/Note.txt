@@ -1,1 +1,3 @@
 This is the example model to be used in ANSVIS
+
+Password to zip: AnsCustomModels20@$
